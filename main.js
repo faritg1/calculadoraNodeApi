@@ -2,7 +2,17 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 
-app.get('/sumar/:n1/:n2', (req, res) => {
+app.use(express.json())
+
+app.post('/calculadora', (req, res) => {
+  const operacion = req.body.oper
+  const resultado = parseInt(eval(operacion))
+  res.json({
+    resultado
+  })
+})
+
+/* app.get('/sumar/:n1/:n2', (req, res) => {
   const num1 = Number(req.params.n1)
   const num2 = Number(req.params.n2)
   const sum = num1 + num2
@@ -32,7 +42,7 @@ app.get('/division/:n1/:n2', (req, res) => {
     const div = num1 / num2
     res.send(`el resultado es ${div}`)
   }
-})
+}) */
 
 app.listen(PORT, () => {
   console.log(`Iniciando http://localhost:${PORT}`)

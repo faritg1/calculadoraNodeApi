@@ -4,7 +4,7 @@
   "description": "calculadora basica",
   "main": "main.js",
   "scripts": {
-    "dev":"nodemon, main.js",
+    "dev": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "carlos torres",
@@ -17,6 +17,7 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20"
   }
 }
